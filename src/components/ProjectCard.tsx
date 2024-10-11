@@ -18,7 +18,7 @@ const ProjectCard: React.FC<{
   return (
     <Card
       as="a"
-      href={`/projects/${id}`}
+      href={`projects/${id}`}
       transition=".5s"
       overflow="hidden"
       _hover={{ filter: "brightness(120%)", transform: "scale(1.05)" }}

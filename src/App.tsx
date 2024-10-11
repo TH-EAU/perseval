@@ -1,13 +1,4 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Container,
-  Heading,
-  Image,
-  SimpleGrid,
-  Stack,
-} from "@chakra-ui/react";
+import { Heading, SimpleGrid } from "@chakra-ui/react";
 import { useProjects } from "./dataHooks/project.queries";
 import { useEffect } from "react";
 import ProjectCard from "./components/ProjectCard";

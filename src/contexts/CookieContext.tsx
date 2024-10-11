@@ -9,10 +9,6 @@ interface CookieContextType {
 
 const CookieContext = createContext<CookieContextType | undefined>(undefined);
 
-interface CookieProviderProps {
-  children: ReactNode;
-}
-
 export const CookieProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {

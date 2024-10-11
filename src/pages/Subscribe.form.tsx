@@ -6,14 +6,12 @@ import {
   Select,
   Stack,
   Text,
-  useToast,
 } from "@chakra-ui/react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useCreateSubscriber } from "../dataHooks/project.mutation";
-import { useEffect } from "react";
+
 import { useProjectSubscribers } from "../dataHooks/subscribers.queries";
-import { useCookieContext } from "../contexts/CookieContext";
 
 type Inputs = {
   name: string;
@@ -28,12 +26,7 @@ const SubscribeForm: React.FC = () => {
   const projectId: string | undefined = project ?? undefined;
   const { data: subscribers } = useProjectSubscribers(projectId);
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
 
   const { mutate } = useCreateSubscriber();
 

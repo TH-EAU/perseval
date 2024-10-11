@@ -6,7 +6,7 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const ProjectCard: React.FC<{
   id: Number;

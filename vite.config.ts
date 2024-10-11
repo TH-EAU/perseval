@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     define: {
       "process.env.REACT_APP_API_URL": JSON.stringify(env.REACT_APP_API_URL),
     },
+    base: "{./perseval}",
     plugins: [react()],
-    base: "{/perseval/}",
   };
 });
